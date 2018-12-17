@@ -10,6 +10,16 @@ var food1_uppercase = food1.toUpperCase();
 var food2_lowercase = food2.toLowerCase();
 var word_split = food3.split("");
 
+function titleCase(food1) {
+  return food1
+    .toLowerCase()
+    .split(" ")
+    .map(function(word) {
+      return word.charAt(0).toUpperCase() + word.slice(1);
+    })
+    .join(" ");
+}
+
 console.log(food1);
 console.log(food2);
 console.log(food3);
@@ -21,3 +31,4 @@ console.log("Let's combine this word! : " + combine_str);
 console.log("Uppercase this word! : " + food1_uppercase);
 console.log("Lowercase this word! : " + food2_lowercase);
 console.log("Let's split this word :) " + word_split);
+console.log(titleCase(food1));
