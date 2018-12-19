@@ -50,15 +50,20 @@ console.log(menu1.concat(menu2));
 
 //Level 5
 const menu_resto = [
-    "hot choco",
-    null,
-    undefined,
-    "hot tea",
-    10,
-    "Cold soda",
-    "cold tea",
-    7,
-    9,
-    "spicy noodle",
-    "spicy fried rice"
-]
+  "hot choco",
+  null,
+  undefined,
+  "hot tea",
+  10,
+  "Cold soda",
+  "cold tea",
+  7,
+  9,
+  "spicy noodle",
+  "spicy fried rice"
+];
+
+const menuMix = menu_resto.filter(mixmenu => typeof mixmenu === "string")
+console.log(menuMix);
+
+
