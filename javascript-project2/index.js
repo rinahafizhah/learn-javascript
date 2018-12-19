@@ -4,7 +4,7 @@ const products = [
   "Cold soda",
   "cold tea",
   "spicy noodle",
-  "Spicy fried rice"
+  "spicy fried rice"
 ];
 
 console.log(products);
@@ -19,16 +19,20 @@ const identifyFood = products.filter(function(food) {
 });
 console.log(identifyFood);
 
-const identifyHotDrink = products.filter(function(drink) {
-  return drink.toLocaleLowerCase().includes("hot".toLocaleLowerCase());
-  
+const identifyDrink = products.filter(function(drink) {
+  if (
+    drink.toLocaleLowerCase().includes("hot".toLocaleLowerCase()) ||
+    drink.toLocaleLowerCase().includes("cold".toLocaleLowerCase())
+  ) {
+    return drink;
+  }
 });
-console.log(identifyHotDrink);
+console.log(identifyDrink);
 
-const identifyColdDrink = products.filter(function (drink) {
-    return drink.toLocaleLowerCase().includes("cold".toLocaleLowerCase());
-
+const identifyMenu = products.map((menu, i) => {
+  if (menu.includes("spicy")) console.log(`${i + 1}. ${menu} (food)`);
+  else if (menu.includes("hot")) console.log(`${i + 1}. ${menu} (drink)`);
+  else console.log(`${i + 1}. ${menu} (drink)`);
 });
-console.log(identifyColdDrink);
 
-const menuIdentify = products.map(menu + "names")
+
