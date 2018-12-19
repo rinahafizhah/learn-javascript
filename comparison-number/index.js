@@ -17,19 +17,20 @@ if (grade >= 80 && grade >= 90) {
 
 var num1 = 40;
 var num2 = 20;
-var result = num1 > num2
-  ? "Amazing! You're right. num1 larger than num2"
-  : num2 > num1
-  ? "It's bad. You're wrong. Num2 smaller than num1"
-  : "You're doing a great job!";
+var result =
+  num1 > num2
+    ? "Amazing! You're right. num1 larger than num2"
+    : num2 > num1
+    ? "It's bad. You're wrong. Num2 smaller than num1"
+    : "You're doing a great job!";
 alert(result);
 
-function myShop(price, product = 10) {
-  let income = price * product;
-  
+function myShop(price, quantity = 10) {
+  let income = price * quantity;
+
   if (income > 0) {
-    return income 
+    return income;
   }
   return income;
 }
-console.log(myshop);
+console.log(myShop(1600, 5));
